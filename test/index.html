@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/logger/assets/logger.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/yuitest/assets/testlogger.css">
+    
+    <!-- Dependencies --> 
+    <script src="http://yui.yahooapis.com/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+    <script src="http://yui.yahooapis.com/2.9.0/build/logger/logger-min.js"></script>
+    
+    <!-- Source File -->
+    <script src="http://yui.yahooapis.com/2.9.0/build/yuitest/yuitest-min.js"></script>
+    
+    <script>
+      var Assert = YAHOO.util.Assert;
+    </script>
+
+
+    <script src="../decimal.js"></script>
+    <script src="test1.js"></script>
+
+    <script>
+      var runner = YAHOO.tool.TestRunner;
+      runner.subscribe(runner.TEST_PASS_EVENT, function(data) {
+        console.log(data.testName + " passed.");
+      });
+      runner.subscribe(runner.TEST_FAIL_EVENT, function(data) {
+        console.error(data.testName + " failed with message: " + data.error.getMessage());
+      });
+      YAHOO.tool.TestRunner.run();
+    </script>
+</head>
+
+<body>
+</body>
+</html>

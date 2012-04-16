@@ -8,13 +8,22 @@ Decimal.js is a decimal number library for JS.
     var d2 = Decimal.parse("0.3");
     var d3 = d1.decimalByAdding(d2);
 
+## Features
+
+* Parse string as a decimal number
+* Print a decimal number
+* Add / subtract / mutliply decimal numbers 
+  (Dividing not supported since we have no plan to use it now.)
+
+## Known Issue
+
+* No dividing operation provided.
+
 ## Dependencies
 
 Nothing.
 
 Unit tests included in `test` directory uses YUI Test.
-
-## Lisence
 
 ## Author
 
